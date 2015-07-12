@@ -2,6 +2,11 @@ defmodule HelloPhoenix.HelloController do
   use HelloPhoenix.Web, :controller
 
   def index(conn, _params) do
+    headers = ["User-Agent": "My App"]
+    response = HTTPotion.get "localhost/~snow/", [headers: headers]
+    %HTTPotion.Response{status_code: 200, body: body} = response
+    IO.puts(body)
+
     render conn, "index.html"
   end
 
