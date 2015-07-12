@@ -9,6 +9,7 @@ defmodule HelloPhoenix.Mixfile do
      compilers: [:phoenix] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     test_coverage: [tool: Coverex.Task],
      deps: deps]
   end
 
@@ -33,6 +34,7 @@ defmodule HelloPhoenix.Mixfile do
      {:phoenix_live_reload, "~> 0.4", only: :dev},
      {:cowboy, "~> 1.0"},
      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
+     {:coverex, "~> 1.4.1" },
      {:httpotion, "~> 2.1.0"}]
   end
 end
