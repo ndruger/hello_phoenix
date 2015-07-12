@@ -1,0 +1,488 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 167.0,
+		"last_filter": "Package Control:dis",
+		"selected_items":
+		[
+			[
+				"Package Control:dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control:Ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control:di",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control:L",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control:Lis",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control:Dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control:E",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control:",
+				"Package Control: Enable Package"
+			],
+			[
+				"Package Control: di",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"removep",
+				"Package Control: Remove Package"
+			],
+			[
+				"Upgrade Package",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"show ",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"show",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"Show Error ",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"toggle",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				" Toggle Linter",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 323.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/snow/projects/phoenix/hello_phoenix"
+	],
+	"file_history":
+	[
+		"/Users/snow/projects/phoenix/hello_phoenix/hellow_phoenix",
+		"/Users/snow/projects/phoenix/hello_phoenix/.sublime-project",
+		"/Users/snow/projects/phoenix/hello_phoenix/test/controllers/page_controller_test.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/templates/layout/app.html.eex",
+		"/Users/snow/projects/phoenix/hello_phoenix/test/support/conn_case.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/controllers/page_controller.ex",
+		"/Users/snow/Sites/index.html",
+		"/Users/snow/projects/flow/examples/01_HelloWorld/hello.js",
+		"/Users/snow/projects/flow/examples/02_TypeAnnotations/type_annotations.js",
+		"/Users/snow/projects/elixir/test.erl",
+		"/Users/snow/projects/elixir/test.",
+		"/Users/snow/projects/node-express-example/myq.js",
+		"/Users/snow/projects/node-express-example/package.json",
+		"/Users/snow/projects/node-express-example/neko.js",
+		"/Users/snow/untitled.js",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/snow/tmp_projects/elixir/test.ex",
+		"/Users/snow/tmp_projects/mangoose/schema.js",
+		"/Users/snow/tmp_projects/mangoose/test.js",
+		"/Users/snow/tmp_projects/mangoose/test.json",
+		"/Users/snow/tmp_projects/bigquery_basket/config.json",
+		"/Users/snow/tmp_projects/bigquery_basket/test.log",
+		"/Users/snow/tmp_projects/node/mychai.coffee",
+		"/Users/snow/tmp_projects/node/test.coffee",
+		"/Users/snow/tmp_projects/bigquery_basket/test.coffee",
+		"/Users/snow/tmp_projects/bigquery_basket/create_sample.rb",
+		"/Users/snow/tmp_projects/elixir/test.exs",
+		"/Users/snow/tmp_projects/node/test.js",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/snow/tmp_projects/bigquery_basket/test.js",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/snow/tmp_projects/skynet/curl.txt",
+		"/Users/snow/Downloads/pg-0.19/pg.lisp",
+		"/Users/snow/tmp_projects/skynet/test.js",
+		"/Users/snow/tmp_projects/skynet/token.txt",
+		"/Users/snow/Downloads/google-api-nodejs-client-master 3/examples/multiple.js",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/Better CoffeeScript/CoffeeScript.sublime-settings",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/Better CoffeeScript/Keymaps/Default (OSX).sublime-keymap",
+		"/Users/snow/projects/myhubot/hubot-mint.coffee",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
+		"/Users/snow/projects/myhubot/hubot-test.coffee",
+		"/Users/snow/projects/myhubot/call.coffee",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/User/ColorHighlighter.sublime-settings",
+		"/Users/snow/projects/myhubot/package.json",
+		"/Users/snow/projects/node-express-example/.travis.yml",
+		"/Users/snow/projects/myhubot/my_start.sh",
+		"/Users/snow/tmp_projects/twilio/call.coffee",
+		"/Users/snow/tmp_projects/twilio/call.js",
+		"/Users/snow/tmp_projects/julius/test.js",
+		"/Users/snow/projects/myhubot/scripts/travis.coffee",
+		"/Users/snow/projects/node-express-example/config/deploy/devserver.rb",
+		"/Users/snow/projects/myhubot/scripts/msgFromHttp.coffee",
+		"/Users/snow/projects/node-express-example/config/deploy.rb",
+		"/Users/snow/projects/node-express-example/script/forever_restart.sh",
+		"/Users/snow/projects/node-express-example/app.coffee",
+		"/Users/snow/projects/node-express-example/config/development.yml",
+		"/Users/snow/projects/node-express-example/fonts/bootstrap/glyphicons-halflings-regular.woff",
+		"/Users/snow/projects/node-express-example/npm-shrinkwrap.json",
+		"/Users/snow/projects/node-express-example/assets/stylesheets/style.css",
+		"/Users/snow/projects/node-express-example/assets/js/application.coffee",
+		"/Users/snow/projects/node-express-example/config/node-express-example-config.sh",
+		"/Users/snow/projects/node-express-example/Capfile",
+		"/Users/snow/projects/node-express-example/config/deploy/production.rb",
+		"/Users/snow/projects/myhubot/scripts/eliza.coffee",
+		"/Users/snow/projects/myhubot/scripts/twilio.coffee",
+		"/Users/snow/projects/node-express-example/config/config.sh",
+		"/Users/snow/projects/node-express-example/config/default.yml",
+		"/Users/snow/projects/myhubot/my_start",
+		"/Users/snow/projects/myhubot/scripts/lgtm.coffee",
+		"/Users/snow/projects/myhubot/config/deploy.rb",
+		"/Users/snow/tmp/neko2.coffee",
+		"/Users/snow/projects/node-express-example/test/controllers/index.coffee",
+		"/Users/snow/projects/node-express-example/src/controllers/clss.coffee",
+		"/Users/snow/projects/node-express-example/src/controllers/index.coffee",
+		"/Users/snow/projects/node-express-example/test/controllers/errors.coffee",
+		"/Users/snow/projects/node-express-example/test/controllers/mails.coffee",
+		"/Users/snow/projects/node-express-example/Gruntfile.coffee",
+		"/Users/snow/projects/node-express-example/src/initializers/mailer.coffee",
+		"/Users/snow/projects/node-express-example/test/controllers/clss.coffee",
+		"/Users/snow/projects/node-express-example/src/routes.coffee",
+		"/Users/snow/projects/node-express-example/src/controllers/redis_test.coffee",
+		"/Users/snow/projects/node-express-example/src/logger_maker.coffee",
+		"/Users/snow/projects/node-express-example/src/putil.coffee",
+		"/Users/snow/projects/node-express-example/src/controllers/users.coffee",
+		"/Users/snow/projects/node-express-example/src/controllers/errors.coffee",
+		"/Users/snow/projects/node-express-example/.gitignore",
+		"/Users/snow/projects/node-express-example/Gemfile",
+		"/Users/snow/projects/node-express-example/src/controllers/mails.coffee",
+		"/Users/snow/projects/node-express-example/.git/objects/c3/aa4b0a4597eda23756e1eb1cf536b005cbe491",
+		"/Users/snow/projects/node-express-example/app.js",
+		"/Users/snow/projects/node-express-example/node_modules/chai/lib/chai/utils/addProperty.js",
+		"/Users/snow/projects/node-express-example/dst/initializers/initializers.js.map",
+		"/Users/snow/projects/node-express-example/src/initializers/initializers.coffee",
+		"/Users/snow/projects/node-express-example/node_modules/newrelic/test/instrumentation-http-instrument-outbound.js",
+		"/Users/snow/projects/node-express-example/views/index.jade",
+		"/Users/snow/projects/node-express-example/config/test.yml",
+		"/Users/snow/projects/node-express-example/node_modules/newrelic/node_modules/proxying-agent/lib/proxying-agent.js",
+		"/Users/snow/projects/node-express-example/src/initializers/logger.coffee",
+		"/Users/snow/projects/node-express-example/spec/HelloSpec.coffee",
+		"/Users/snow/projects/node-express-example/config/devserver",
+		"/Users/snow/projects/node-express-example/fonts/bootstrap/glyphicons-halflings-regular.svg",
+		"/Users/snow/projects/node-express-example/dst/initializers/logger.js",
+		"/Users/snow/projects/node-express-example/dst/logger_maker.js",
+		"/Users/snow/projects/node-express-example/node_modules/coffeelint/node_modules/optimist/example/line_count_options.js",
+		"/Users/snow/projects/node-express-example/node_modules/.bin/lessc",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*.*",
+			"*.coffee",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"repo",
+			"Comments",
+			"whilefn",
+			"sile",
+			"    ",
+			"ctrl+s",
+			"receipt_id",
+			"STREAM_NAEM",
+			"sample",
+			"name",
+			"aws",
+			"repl-client",
+			",sg",
+			"　",
+			"config",
+			"bin",
+			".bin",
+			"grunt",
+			"palett",
+			"package",
+			"console",
+			"/routes/",
+			"find_f",
+			"find",
+			"next_view",
+			"nextView",
+			"window",
+			"tab",
+			"log",
+			"(req, res)",
+			"env",
+			"mocha",
+			"newrelic",
+			"watch",
+			"blue",
+			"zshenv"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"  ",
+			"user_id",
+			"STREAM_NAME",
+			"/controllers/",
+			"(req, res, next)"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "hello_phoenix.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"page_con",
+				"web/controllers/page_controller.ex"
+			],
+			[
+				"app.co",
+				"node-express-example/app.coffee"
+			],
+			[
+				"app.js",
+				"node-express-example/package.json"
+			],
+			[
+				"forever_re",
+				"node-express-example/script/forever_restart.sh"
+			],
+			[
+				"deploy",
+				"node-express-example/config/deploy.rb"
+			],
+			[
+				"capi",
+				"node-express-example/Capfile"
+			],
+			[
+				"my_s",
+				"myhubot/my_start.sh"
+			],
+			[
+				"grunt",
+				"Gruntfile.coffee"
+			],
+			[
+				"puti",
+				"src/putil.coffee"
+			],
+			[
+				"default",
+				"config/default.yml"
+			],
+			[
+				"app.",
+				"app.coffee"
+			],
+			[
+				"initi",
+				"src/initializers/initializers.coffee"
+			],
+			[
+				"initiali",
+				"src/initializers/initializers.coffee"
+			],
+			[
+				".tra",
+				".travis.yml"
+			],
+			[
+				"package.js",
+				"package.json"
+			],
+			[
+				"logg",
+				"src/logger_maker.coffee"
+			],
+			[
+				"logger",
+				"dst/logger_maker.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 197.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
