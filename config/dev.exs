@@ -11,7 +11,13 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
   debug_errors: true,
   code_reloader: true,
   cache_static_lookup: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch"]]
+  watchers: [node: ["node_modules/brunch/bin/brunch", "watch"]],
+  neko: "test"
+
+config :hello_phoenix, HelloPhoenix.Backend,
+  neko2: "test"
+
+config :backend, host: "http://localhost"
 
 # Watch static and templates for browser reloading.
 config :hello_phoenix, HelloPhoenix.Endpoint,

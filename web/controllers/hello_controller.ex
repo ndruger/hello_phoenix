@@ -3,9 +3,10 @@ defmodule HelloPhoenix.HelloController do
 
   def index(conn, _params) do
     headers = ["User-Agent": "My App"]
-    response = HTTPotion.get "localhost/~snow/", [headers: headers]
+    response = HTTPotion.get Application.get_env(:backend, :host) <> "/~snow/", [headers: headers]
     %HTTPotion.Response{status_code: 200, body: body} = response
     IO.puts(body)
+    IO.puts(HelloPhoenix.Endpoint.config(:neko))
 
     render conn, "index.html"
   end
