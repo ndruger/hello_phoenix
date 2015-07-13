@@ -1,10 +1,11 @@
-import {Socket} from "phoenix"
+import {Socket} from "phoenix";
+// import BackboneReactMixin from 'backbone-react-component';
 //import { Router, Route, Link } from 'react-router';
 
-import Test from "./test"
-import MapMonitor from "./components/map_monitor"
-import Settings from "./components/settings"
-import Dashboard from "./components/dashboard"
+
+import MapMonitor from "./components/map_monitor";
+import Settings from "./components/settings";
+import Dashboard from "./components/dashboard";
 
 // bower about "react-router" makes problem on webpackUniversalModuleDefinition
 let Router = window.ReactRouter
@@ -43,4 +44,5 @@ Router.run(routes, (Handler) => {
   React.render(<Handler/>, document.getElementById('hello_world'));
 });
 
-export default App
+export default App;
+
