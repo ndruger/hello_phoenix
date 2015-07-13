@@ -12,6 +12,9 @@
   </head>
 
   <body>
+    <!-- backbone.$ is null ...-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <div class="container" role="main">
       <div class="header">
         <ul class="nav nav-pills pull-right">

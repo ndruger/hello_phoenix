@@ -13,11 +13,19 @@ defmodule HelloPhoenix.Router do
   end
 
   scope "/", HelloPhoenix do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
+ 
+  end
+
+  # public routes via the api
+  scope "/api/v1", HelloPhoenix do
+    pipe_through :api
+
+    get "/books", BooksController, :index
   end
 
   # Other scopes may use custom stacks.

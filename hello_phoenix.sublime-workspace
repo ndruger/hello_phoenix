@@ -15,10 +15,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 167.0,
-		"last_filter": "Package Control:dis",
+		"height": 392.0,
+		"last_filter": "Package",
 		"selected_items":
 		[
+			[
+				"Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Pa",
+				"Package Control: List Packages"
+			],
 			[
 				"Package Control:dis",
 				"Package Control: Disable Package"
@@ -141,15 +149,61 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/snow/projects/phoenix/hello_phoenix"
+		"/Users/snow/projects/phoenix/hello_phoenix",
+		"/Users/snow/projects/phoenix/hello_phoenix/config",
+		"/Users/snow/projects/phoenix/hello_phoenix/lib",
+		"/Users/snow/projects/phoenix/hello_phoenix/lib/hello_phoenix",
+		"/Users/snow/projects/phoenix/hello_phoenix/test/channels",
+		"/Users/snow/projects/phoenix/hello_phoenix/test/controllers",
+		"/Users/snow/projects/phoenix/hello_phoenix/test/support",
+		"/Users/snow/projects/phoenix/hello_phoenix/web",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/controllers",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/models",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/assets/images",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/css",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/js",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/js/components",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/vendor",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/templates",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/templates/layout",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/views"
 	],
 	"file_history":
 	[
+		"/Users/snow/projects/phoenix/hello_phoenix/web/views/error_view.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/views/hello_view.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/templates/layout/app.html.eex",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/router.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/views/books_view.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/lib/hello_phoenix/backend.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/controllers/books_controller.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/config/dev.secret.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/config/dev.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/config/prod.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/js/app.js",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/js/test.js",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/js/components/map_monitor.js",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/js/components/dashboard.js",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/controllers/book_controller.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/static/js/components/settings.js",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/controllers/hello_controller.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/brunch-config.js",
+		"/Users/snow/projects/phoenix/hello_phoenix/test/controllers/hello_controller_test.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/mix.exs",
+		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/snow/projects/phoenix/hello_phoenix/lib/hello_phoenix.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/web/web.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/config/test.secret.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/config/prod.secret.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/test/support/conn_case.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/test/test_helper.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/lib/hello_phoenix/repo.ex",
+		"/Users/snow/projects/phoenix/hello_phoenix/.gitignore",
+		"/Users/snow/projects/phoenix/hello_phoenix/config/test.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/test/controllers/page_controller_test.exs",
+		"/Users/snow/projects/phoenix/hello_phoenix/hello_phoenix.sublime-project",
 		"/Users/snow/projects/phoenix/hello_phoenix/hellow_phoenix",
 		"/Users/snow/projects/phoenix/hello_phoenix/.sublime-project",
-		"/Users/snow/projects/phoenix/hello_phoenix/test/controllers/page_controller_test.exs",
-		"/Users/snow/projects/phoenix/hello_phoenix/web/templates/layout/app.html.eex",
-		"/Users/snow/projects/phoenix/hello_phoenix/test/support/conn_case.ex",
 		"/Users/snow/projects/phoenix/hello_phoenix/web/controllers/page_controller.ex",
 		"/Users/snow/Sites/index.html",
 		"/Users/snow/projects/flow/examples/01_HelloWorld/hello.js",
@@ -160,7 +214,6 @@
 		"/Users/snow/projects/node-express-example/package.json",
 		"/Users/snow/projects/node-express-example/neko.js",
 		"/Users/snow/untitled.js",
-		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/snow/tmp_projects/elixir/test.ex",
 		"/Users/snow/tmp_projects/mangoose/schema.js",
@@ -244,18 +297,11 @@
 		"/Users/snow/projects/node-express-example/config/test.yml",
 		"/Users/snow/projects/node-express-example/node_modules/newrelic/node_modules/proxying-agent/lib/proxying-agent.js",
 		"/Users/snow/projects/node-express-example/src/initializers/logger.coffee",
-		"/Users/snow/projects/node-express-example/spec/HelloSpec.coffee",
-		"/Users/snow/projects/node-express-example/config/devserver",
-		"/Users/snow/projects/node-express-example/fonts/bootstrap/glyphicons-halflings-regular.svg",
-		"/Users/snow/projects/node-express-example/dst/initializers/logger.js",
-		"/Users/snow/projects/node-express-example/dst/logger_maker.js",
-		"/Users/snow/projects/node-express-example/node_modules/coffeelint/node_modules/optimist/example/line_count_options.js",
-		"/Users/snow/projects/node-express-example/node_modules/.bin/lessc",
-		"/Users/snow/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings"
+		"/Users/snow/projects/node-express-example/spec/HelloSpec.coffee"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -272,6 +318,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"app =",
+			"var ",
+			"HelloPhoenix.Repo",
+			"Phoenix3",
+			"repo",
+			"exclude",
 			"repo",
 			"Comments",
 			"whilefn",
@@ -315,13 +367,14 @@
 		"regex": false,
 		"replace_history":
 		[
+			"let ",
 			"  ",
 			"user_id",
 			"STREAM_NAME",
 			"/controllers/",
 			"(req, res, next)"
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -374,7 +427,7 @@
 	"project": "hello_phoenix.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -383,6 +436,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"bru",
+				"brunch-config.js"
+			],
+			[
+				"brun",
+				"brunch-config.js"
+			],
+			[
+				"mix.",
+				"mix.exs"
+			],
 			[
 				"page_con",
 				"web/controllers/page_controller.ex"
