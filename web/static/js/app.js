@@ -14,8 +14,8 @@ let DefaultRoute = Router.DefaultRoute;
 let Link = Router.Link;
 let RouteHandler = Router.RouteHandler;
 
-let App = React.createClass({
-  render: function () {
+class App extends React.Component {
+  render() {
     return (
       <div>
         <header>
@@ -29,7 +29,7 @@ let App = React.createClass({
       </div>
     );
   }
-});
+};
 
 let routes = (
   <Route name="app" path="/" handler={App}>
@@ -39,7 +39,7 @@ let routes = (
   </Route>
 );
 
-Router.run(routes, function (Handler) {
+Router.run(routes, (Handler) => {
   React.render(<Handler/>, document.getElementById('hello_world'));
 });
 

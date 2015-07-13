@@ -1,11 +1,11 @@
-let Settings = React.createClass({
-  render: function () {
+class Settings extends React.Component {
+  render() {
     return (
       <div>
         Settings
       </div>
     );
   }
-});
+}
 
 export default Settings
