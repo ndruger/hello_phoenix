@@ -28,7 +28,6 @@ $(function() {
               <li><Link to="map">Map</Link></li>
               <li><Link to="settings">Settings</Link></li>
             </ul>
-            Logged in as Jane
           </header>
           <RouteHandler/>
         </div>
