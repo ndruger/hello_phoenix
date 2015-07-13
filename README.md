@@ -1,9 +1,18 @@
+# Prerequirement
+
+- node
+- phoenix
+- elixir
+- bowser(`npm install -g bower`)
+
+# Install/Update Packages
+
+- `bower install`
+- `mix deps.get`
+
 # HelloPhoenix
 
-To start your new Phoenix application:
-
-1. Install dependencies with `mix deps.get`
-2. Start Phoenix endpoint with `mix phoenix.server`
+`mix phoenix.server`
 
 Now you can visit `localhost:4000` from your browser.
 

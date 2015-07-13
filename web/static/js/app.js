@@ -7,6 +7,13 @@ import {Socket} from "phoenix"
 //   console.log("Success!")
 // })
 
+$(function() {
+  React.render(
+    <h1 className="jumbotron">Hello from React!!!</h1>,
+    document.getElementById('hello_world')
+  );
+});
+
 let App = {
 }
 

@@ -21,3 +21,10 @@ erl_crash.dump
 # secrets file as long as you replace its contents by environment
 # variables.
 /config/*.secret.exs
+
+# Coverage
+/cover
+
+# Bower
+/bower_components
+

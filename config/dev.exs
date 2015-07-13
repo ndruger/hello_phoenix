@@ -17,7 +17,9 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
 config :hello_phoenix, HelloPhoenix.Backend,
   neko2: "test"
 
-config :backend, host: "http://localhost"
+config :backend,
+  host: "http://localhost",
+  key: System.get_env("MAILGUN_API_KEY")
 
 # Watch static and templates for browser reloading.
 config :hello_phoenix, HelloPhoenix.Endpoint,

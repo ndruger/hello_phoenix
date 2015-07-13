@@ -1,0 +1,20 @@
+{
+  "name": "hello_phoenix",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ndruger/hello_phoenix",
+  "authors": [
+    "ndruger <snowfullnight@gmail.com>"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "react": "~0.13.3"
+   }
+}
