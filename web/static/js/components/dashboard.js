@@ -1,20 +1,26 @@
 import BookCollection from "../collections/book_collection"
 
-class Dashboard extends React.Component {
-  render() {
-    this._requestUpdate();
-    
+let Dashboard = React.createClass({
+  mixins: [Backbone.React.Component.mixin, ReactRouter.State],
+  render: function() {
+    // console.log('render', this.state, this.props)
     return (
       <div>
-        Dashboard
+        {
+          this.getCollection().map((item) => {
+            return <div>{item.get('id')}</div>;
+          })
+        }
       </div>
     );
+  },
+  overrideCollection: function() {
+    return new BookCollection();
+  },
+  componentDidMount: function() {
+    this.getCollection().fetch();
+    // setState 
   }
-  _requestUpdate() {
-    let books = new BookCollection();
-    books.fetch();
-  }
-}
-
+});
 
 export default Dashboard
