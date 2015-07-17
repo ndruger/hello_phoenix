@@ -10,12 +10,6 @@ import BookCollection from "./collections/book_collection"
 let Router = ReactRouter;
 let {Route, DefaultRoute, Link, RouteHandler} = Router;
 
-// var collection = new Backbone.Collection([
-//   {id: 0, helloWorld: 'Hello world!'},
-//   {id: 1, helloWorld: 'Hello world!'}
-// ]);
-var collection = new BookCollection();
-
 let App = React.createClass({
   mixins: [Backbone.React.Component.mixin],
   render: function() {
@@ -28,7 +22,7 @@ let App = React.createClass({
             <li><Link to="settings">Settings</Link></li>
           </ul>
         </header>
-        <RouteHandler collection={collection}/>
+        <RouteHandler/>
       </div>
     );
   }
