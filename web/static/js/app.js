@@ -7,8 +7,7 @@ import MapMonitor from "./components/map_monitor";
 import Settings from "./components/settings";
 import Dashboard from "./components/dashboard";
 
-// bower about "react-router" makes problem on webpackUniversalModuleDefinition
-let Router = window.ReactRouter
+let Router = ReactRouter
 let Route = Router.Route;
 let NotFoundRoute = Router.NotFoundRoute;
 let DefaultRoute = Router.DefaultRoute;

@@ -20,7 +20,8 @@ exports.config = {
       // }
       order: {
         before: [
-          'jquery'
+          // 'jquery'
+          /react.js/
         ]
       }
     },
@@ -51,6 +52,7 @@ exports.config = {
   // Configure your plugins
   plugins: {
     babel: {
+      blacklist: ["strict"],  // prevent undefined this. https://babeljs.io/docs/faq/#why-is-this-being-remapped-to-undefined-
       // Do not use ES6 compiler in vendor code
       ignore: [/^(web\/static\/vendor)/]
     }
