@@ -1,18 +1,12 @@
 import {Socket} from "phoenix";
 // import BackboneReactMixin from 'backbone-react-component';
-//import { Router, Route, Link } from 'react-router';
-
 
 import MapMonitor from "./components/map_monitor";
 import Settings from "./components/settings";
 import Dashboard from "./components/dashboard";
 
-let Router = ReactRouter
-let Route = Router.Route;
-let NotFoundRoute = Router.NotFoundRoute;
-let DefaultRoute = Router.DefaultRoute;
-let Link = Router.Link;
-let RouteHandler = Router.RouteHandler;
+let Router = ReactRouter;
+let {Route, DefaultRoute, Link, RouteHandler} = Router;
 
 class App extends React.Component {
   render() {
