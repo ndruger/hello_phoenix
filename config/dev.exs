@@ -11,8 +11,8 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
   debug_errors: true,
   code_reloader: true,
   cache_static_lookup: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch"]],
-  neko: "test"
+  watchers: [node: ["node_modules/gulp/bin/gulp.js", "watch"]]
+#  watchers: [node: ["node_modules/brunch/bin/brunch", "watch"]]
 
 config :hello_phoenix, HelloPhoenix.Backend,
   neko2: "test"

@@ -1,7 +1,12 @@
+import React from "react";
+import {Route, Link} from 'react-router';
+
 import BookCollection from "../collections/book_collection"
+import BackboneMixin from "backbone-react-component";
 
 let Dashboard = React.createClass({
-  mixins: [Backbone.React.Component.mixin, ReactRouter.State],
+  // mixins: [backboneMixin, Router.State],
+  mixins: [BackboneMixin],
   render: function() {
     // console.log('render', this.state, this.props)
     return (

@@ -1,5 +1,6 @@
-import {Socket} from "phoenix";
-// import BackboneReactMixin from 'backbone-react-component';
+import React from "react";
+import Router, {DefaultRoute, Route, Link, RouteHandler} from 'react-router';
+import BackboneMixin from "backbone-react-component";
 
 import MapMonitor from "./components/map_monitor";
 import Settings from "./components/settings";
@@ -7,11 +8,8 @@ import Dashboard from "./components/dashboard";
 
 import BookCollection from "./collections/book_collection"
 
-let Router = ReactRouter;
-let {Route, DefaultRoute, Link, RouteHandler} = Router;
-
 let App = React.createClass({
-  mixins: [Backbone.React.Component.mixin],
+  mixins: [BackboneMixin],
   render: function() {
     return (
       <div>
