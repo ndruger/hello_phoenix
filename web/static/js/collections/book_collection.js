@@ -1,3 +1,5 @@
+import Backbone from "backbone";
+
 import BookModel from "../models/book_model"
 
 class BookCollection extends Backbone.Collection {

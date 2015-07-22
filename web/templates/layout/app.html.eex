@@ -12,11 +12,6 @@
   </head>
 
   <body>
-    <!-- backbone.$ is null ...-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
-
     <div class="container" role="main">
       <div class="header">
         <ul class="nav nav-pills pull-right">
