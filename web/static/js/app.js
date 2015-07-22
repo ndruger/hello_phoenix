@@ -1,6 +1,7 @@
 import React from "react";
 import Router, {DefaultRoute, Route, Link, RouteHandler} from 'react-router';
 import BackboneMixin from "backbone-react-component";
+import i18n from 'i18next-client';
 
 import MapMonitor from "./components/map_monitor";
 import Settings from "./components/settings";
@@ -34,9 +35,14 @@ let routes = (
   </Route>
 );
 
-Router.run(routes, (Handler) => {
-  React.render(<Handler/>, document.getElementById('hello_world'));
-});
+i18n.init({
+  lng: "ja",
+  fallbackLng: "en"
+}, (err, t) => {
+  Router.run(routes, (Handler) => {
+    React.render(<Handler/>, document.getElementById('hello_world'));
+  });
+})
 
 export default App;
 

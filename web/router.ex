@@ -1,6 +1,7 @@
 defmodule HelloPhoenix.Router do
   use HelloPhoenix.Web, :router
 
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -18,6 +19,7 @@ defmodule HelloPhoenix.Router do
     get "/",                 PageController,  :index
     get "/hello",            HelloController, :index
     get "/hello/:messenger", HelloController, :show
+
   end
 
   # public routes via the api

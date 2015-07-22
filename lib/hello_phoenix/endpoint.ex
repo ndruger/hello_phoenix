@@ -9,6 +9,9 @@ defmodule HelloPhoenix.Endpoint do
     at: "/", from: :hello_phoenix, gzip: false,
     only: ~w(css images js favicon.ico robots.txt)
 
+  plug Plug.Static,
+    at: "/locales", from: "web/static/locales"
+
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do

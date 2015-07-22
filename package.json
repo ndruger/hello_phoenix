@@ -8,6 +8,7 @@
     "brunch": "^1.8.1",
     "clean-css-brunch": ">= 1.0 < 1.8",
     "css-brunch": ">= 1.0 < 1.8",
+    "i18next-client": "^1.10.2",
     "javascript-brunch": ">= 1.0 < 1.8",
     "jquery": "^2.1.4",
     "lodash": "^3.10.0",
@@ -15,6 +16,7 @@
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "react-tap-event-plugin": "^0.1.7",
+    "reflux": "^0.2.10",
     "sass-brunch": "^1.8.10",
     "uglify-js-brunch": ">= 1.0 < 1.8"
   },
