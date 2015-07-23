@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import {Route, Link} from 'react-router';
-import mui from "material-ui";
+import mui from 'material-ui';
 
-import BookCollection from "../collections/book_collection"
-import BackboneMixin from "backbone-react-component";
+import BookCollection from '../collections/book_collection';
+import BackboneMixin from 'backbone-react-component';
 
 const ThemeManager = new mui.Styles.ThemeManager();
 const RaisedButton = mui.RaisedButton;
@@ -22,7 +22,7 @@ const SomeAwesomeComponent = React.createClass({
 
   render() {
     return (
-        <RaisedButton label="Default" />
+        <RaisedButton label='Default' />
     );
   }
 
@@ -51,8 +51,8 @@ const Dashboard = React.createClass({
 
   componentDidMount() {
     this.getCollection().fetch();
-    // setState 
+    // setState
   }
 });
 
-export default Dashboard
+export default Dashboard;

@@ -4,6 +4,7 @@ const babelify = require('babelify');
 const concat = require('gulp-concat');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
+const eslint = require('gulp-eslint');
 
 gulp.task('watch', function() {
   gulp.watch('web/**/*.sass', ['css']);
@@ -25,6 +26,13 @@ gulp.task('js', function() {
     .pipe(source('app.js'))
     .pipe(gulp.dest('priv/static/js'))
 
+});
+
+gulp.task('lint', function () {
+  return gulp.src(['web/static/js/**/*.js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError());
 });
 
 gulp.task('default', ['css', 'js']);

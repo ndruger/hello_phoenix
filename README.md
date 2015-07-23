@@ -23,3 +23,7 @@ Now you can visit `localhost:4000` from your browser.
 ## Test with Coverage
 
 `mix test --cover`
+
+## Lint
+
+`gulp lint`
