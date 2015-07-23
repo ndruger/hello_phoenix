@@ -1,9 +1,10 @@
 import Reflux from "reflux";
 import TodoActions from "../actions/todo_actions";
 
-let TodoListStore = Reflux.createStore({
+const TodoListStore = Reflux.createStore({
   listenables: [TodoActions],
-  onAddItem: function() {
+  
+  onAddItem() {
     this.list = this.list || [];
     this.list = this.list.concat(Math.random());
     this.trigger(this.list)

@@ -5,22 +5,22 @@ import mui from "material-ui";
 import BookCollection from "../collections/book_collection"
 import BackboneMixin from "backbone-react-component";
 
-let ThemeManager = new mui.Styles.ThemeManager();
-let RaisedButton = mui.RaisedButton;
+const ThemeManager = new mui.Styles.ThemeManager();
+const RaisedButton = mui.RaisedButton;
 
-let SomeAwesomeComponent = React.createClass({
+const SomeAwesomeComponent = React.createClass({
 
   childContextTypes: {
     muiTheme: React.PropTypes.object
   },
 
-  getChildContext: function() {
+  getChildContext() {
     return {
       muiTheme: ThemeManager.getCurrentTheme()
     };
   },
 
-  render: function() {
+  render() {
     return (
         <RaisedButton label="Default" />
     );
@@ -28,12 +28,11 @@ let SomeAwesomeComponent = React.createClass({
 
 });
 
-
-let Dashboard = React.createClass({
+const Dashboard = React.createClass({
   // mixins: [backboneMixin, Router.State],
   mixins: [BackboneMixin],
-  render: function() {
-    // console.log('render', this.state, this.props)
+
+  render() {
     return (
       <div>
         <SomeAwesomeComponent/>
@@ -45,10 +44,12 @@ let Dashboard = React.createClass({
       </div>
     );
   },
-  overrideCollection: function() {
+
+  overrideCollection() {
     return new BookCollection();
   },
-  componentDidMount: function() {
+
+  componentDidMount() {
     this.getCollection().fetch();
     // setState 
   }

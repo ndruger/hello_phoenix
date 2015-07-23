@@ -1,8 +1,8 @@
 import React from "react";
-import Router, {DefaultRoute, Route, Link, RouteHandler} from 'react-router';
+import Router, {DefaultRoute, Route, Link, RouteHandler} from "react-router";
 import BackboneMixin from "backbone-react-component";
-import i18n from 'i18next-client';
-import Reflux from 'reflux';
+import i18n from "i18next-client";
+import Reflux from "reflux";
 
 import MapMonitor from "./components/map_monitor";
 import Settings from "./components/settings";
@@ -12,9 +12,10 @@ import TodoListStore from "./stores/todo_list_store";
 
 import BookCollection from "./collections/book_collection"
 
-let App = React.createClass({
+const App = React.createClass({
   mixins: [BackboneMixin, Reflux.connect(TodoListStore, "list")],
-  render: function() {
+
+  render() {
     return (
       <div>
         <header>
@@ -30,7 +31,7 @@ let App = React.createClass({
   }
 });
 
-let routes = (
+const routes = (
   <Route name="app" path="/" handler={App}>
     <DefaultRoute handler={Dashboard}/>
     <Route name="map" handler={MapMonitor}/>
@@ -43,7 +44,7 @@ i18n.init({
   fallbackLng: "en"
 }, (err, t) => {
   Router.run(routes, (Handler) => {
-    React.render(<Handler/>, document.getElementById('hello_world'));
+    React.render(<Handler/>, document.getElementById("hello_world"));
   });
 })
 

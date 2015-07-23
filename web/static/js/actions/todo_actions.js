@@ -1,6 +1,6 @@
 import Reflux from "reflux";
 
-let TodoActions = Reflux.createActions([
+const TodoActions = Reflux.createActions([
   "addItem",
 ]);
 
