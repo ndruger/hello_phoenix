@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Link} from 'react-router';
 import mui from 'material-ui';
 
-import BookCollection from '../collections/book_collection';
+import BookCollection from '../collections/BookCollection';
 import BackboneMixin from 'backbone-react-component';
 
 const ThemeManager = new mui.Styles.ThemeManager();

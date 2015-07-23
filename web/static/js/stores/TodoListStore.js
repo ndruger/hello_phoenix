@@ -1,5 +1,5 @@
 import Reflux from 'reflux';
-import TodoActions from '../actions/todo_actions';
+import TodoActions from '../actions/TodoActions';
 
 const TodoListStore = Reflux.createStore({
   listenables: [TodoActions],

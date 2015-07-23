@@ -4,12 +4,12 @@ import BackboneMixin from 'backbone-react-component';
 import i18n from 'i18next-client';
 import Reflux from 'reflux';
 
-import MapMonitor from './components/map_monitor';
-import Settings from './components/settings';
-import Dashboard from './components/dashboard';
+import MapMonitor from './components/MapMonitor';
+import Settings from './components/Settings';
+import Dashboard from './components/Dashboard';
 
-import TodoListStore from './stores/todo_list_store';
-import BookCollection from './collections/book_collection';
+import TodoListStore from './stores/TodoListStore';
+import BookCollection from './collections/BookCollection';
 
 const App = React.createClass({
   mixins: [BackboneMixin, Reflux.connect(TodoListStore, 'list')],
