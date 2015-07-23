@@ -3,6 +3,6 @@ defmodule HelloPhoenix.HelloControllerTest do
 
   test "GET /" do
     conn = get conn(), "/hello"
-    assert String.contains?(html_response(conn, 200), "Hello World")
+    assert html_response(conn, 200) =~ "Hello World"
   end
 end
