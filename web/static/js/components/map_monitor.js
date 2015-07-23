@@ -8,7 +8,7 @@ const MapMonitor = React.createClass({
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      list: nextProps.list
+      list: nextProps.list,
     });
   },
 
@@ -25,7 +25,7 @@ const MapMonitor = React.createClass({
         {itemsTree}
       </div>
     );
-  }
+  },
 });
 
 export default MapMonitor;

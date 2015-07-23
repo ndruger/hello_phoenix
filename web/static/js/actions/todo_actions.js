@@ -1,7 +1,7 @@
 import Reflux from 'reflux';
 
 const TodoActions = Reflux.createActions([
-  'addItem'
+  'addItem',
 ]);
 
 export default TodoActions;

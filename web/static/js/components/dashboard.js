@@ -11,12 +11,12 @@ const RaisedButton = mui.RaisedButton;
 const SomeAwesomeComponent = React.createClass({
 
   childContextTypes: {
-    muiTheme: React.PropTypes.object
+    muiTheme: React.PropTypes.object,
   },
 
   getChildContext() {
     return {
-      muiTheme: ThemeManager.getCurrentTheme()
+      muiTheme: ThemeManager.getCurrentTheme(),
     };
   },
 
@@ -24,8 +24,7 @@ const SomeAwesomeComponent = React.createClass({
     return (
         <RaisedButton label='Default' />
     );
-  }
-
+  },
 });
 
 const Dashboard = React.createClass({
@@ -52,7 +51,7 @@ const Dashboard = React.createClass({
   componentDidMount() {
     this.getCollection().fetch();
     // setState
-  }
+  },
 });
 
 export default Dashboard;

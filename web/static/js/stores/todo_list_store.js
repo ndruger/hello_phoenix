@@ -8,7 +8,7 @@ const TodoListStore = Reflux.createStore({
     this.list = this.list || [];
     this.list = this.list.concat(Math.random());
     this.trigger(this.list);
-  }
+  },
 });
 
 export default TodoListStore;

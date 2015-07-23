@@ -9,7 +9,6 @@ import Settings from './components/settings';
 import Dashboard from './components/dashboard';
 
 import TodoListStore from './stores/todo_list_store';
-
 import BookCollection from './collections/book_collection';
 
 const App = React.createClass({
@@ -28,7 +27,7 @@ const App = React.createClass({
         <RouteHandler list={this.state.list} />
       </div>
     );
-  }
+  },
 });
 
 const routes = (
@@ -41,7 +40,7 @@ const routes = (
 
 i18n.init({
   lng: 'ja',
-  fallbackLng: 'en'
+  fallbackLng: 'en',
 }, (err, t) => {
   if (err) {
     return;
