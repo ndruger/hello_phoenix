@@ -37,7 +37,7 @@ const Dashboard = React.createClass({
         <SomeAwesomeComponent/>
         {
           this.getCollection().map((item) => {
-            return <div>{item.get('id')}</div>;
+            return <div key={item.get('id')}>{item.get('id')}</div>;
           })
         }
       </div>
