@@ -11,7 +11,7 @@ import Dashboard from './components/Dashboard';
 import TodoListStore from './stores/TodoListStore';
 import BookCollection from './collections/BookCollection';
 
-// import ReactMixin from 'react-mixin';
+import reactMixin from 'react-mixin';
 
 const Mixin = {
   getDefaultProps() {
@@ -43,48 +43,44 @@ const Mixin = {
   },
 };
 
-const Todo = React.createClass({
-  mixins: [Mixin],
-  getDefaultProps() {
-    console.log('Todo getDefaultProps');
-    return {
+class Todo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.props = {
     };
-  },
-  getInitialState() {
-    console.log('Todo getInitialState');
-    return {
-      count: this.props.count,
-      localCount: 1
+    this.state = {
+      count: props.count,
+      localCount: 1,
     };
-  },
+  }
   componentWillMount() {
     console.log('Todo componentWillMount');
-  },
+  }
   componentDidMount() {
     console.log('Todo componentDidMount');
-  },
+  }
   componentWillUnmount() {
     debugger;
     console.log('Todo componentWillUnmount');
-  },
+  }
   shouldComponentUpdate(nextProps, nextState) {
     console.log('Todo shouldComponentUpdate');
     return true;
-  },
+  }
   componentWillUpdate(nextProps, nextState) {
     console.log('Todo componentWillUpdate');
-  },
+  }
   componentDidUpdate(prevProps, prevState) {
     console.log('Todo componentDidUpdate');
-  },
+  }
   componentWillReceiveProps(nextProps) {
     console.log('Todo componentWillReceiveProps', arguments);
-  },
+  }
   _countUp() {
     this.setState({
       localCount: this.state.localCount + 1
     });
-  },
+  }
   render() {
     console.log('Todo render', this.state);
     return (
@@ -93,11 +89,13 @@ const Todo = React.createClass({
         <div>props.count = {this.props.count}</div>
         <div>state.count = {this.state.count}</div>
         <div>state.localCount = {this.state.localCount}</div>
-        <button onClick={this._countUp}>countUp</button>
+        <button onClick={this._countUp.bind(this)}>countUp</button>
       </div>
     );
   }
-});
+}
+
+reactMixin(Todo.prototype, Mixin);
 
 var TodoList = React.createClass({
   getDefaultProps() {
