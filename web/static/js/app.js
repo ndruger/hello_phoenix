@@ -14,6 +14,12 @@ import BookCollection from './collections/BookCollection';
 // import ReactMixin from 'react-mixin';
 
 const Mixin = {
+  propTypes: {
+    requiredMixedProp: React.PropTypes.string.isRequired,
+    mixedTest() {
+      console.log('Mixin customProp');
+    },
+  },
   getDefaultProps() {
     console.log('Mixin getDefaultProps');
     return {
@@ -45,6 +51,12 @@ const Mixin = {
 
 const Todo = React.createClass({
   mixins: [Mixin],
+  propTypes: {
+    requiredProp: React.PropTypes.string.isRequired,
+    test() {
+      console.log('ToDo customProp');
+    },
+  },
   getDefaultProps() {
     console.log('Todo getDefaultProps');
     return {
@@ -54,7 +66,7 @@ const Todo = React.createClass({
     console.log('Todo getInitialState');
     return {
       count: this.props.count,
-      localCount: 1
+      localCount: 1,
     };
   },
   componentWillMount() {
@@ -82,7 +94,7 @@ const Todo = React.createClass({
   },
   _countUp() {
     this.setState({
-      localCount: this.state.localCount + 1
+      localCount: this.state.localCount + 1,
     });
   },
   render() {
@@ -96,7 +108,7 @@ const Todo = React.createClass({
         <button onClick={this._countUp}>countUp</button>
       </div>
     );
-  }
+  },
 });
 
 var TodoList = React.createClass({
@@ -110,14 +122,14 @@ var TodoList = React.createClass({
     return {
       count: 1,
       todos: [
-        {id: 1, text: "item"}
-      ]
+        {id: 1, text: 'item'},
+      ],
     };
   },
   _handleClickIncrementCounter(e) {
     console.log('TodoList onClick');
     this.setState({
-      count: this.state.count + 1
+      count: this.state.count + 1,
     });
   },
   componentWillMount() {
@@ -159,7 +171,7 @@ var TodoList = React.createClass({
     );
     console.log(c.props.children);
     return c;
-  }
+  },
 });
 
 React.render(<TodoList />, document.body);
