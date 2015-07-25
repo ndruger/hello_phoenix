@@ -28,14 +28,10 @@
     "jest": false
   },
   "rules": {
-    "comma-dangle": [
-      2,
-      "always-multiline"
-    ],
+    "no-debugger": 0,
+    "no-underscore-dangle": 0,
     "no-unused-vars": 0,
-    "quotes": [
-      2,
-      "single"
-    ]
+    "quotes": 0,
+    "comma-dangle": 0
   }
 }

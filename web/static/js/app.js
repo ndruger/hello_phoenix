@@ -3,6 +3,7 @@ import Router, {DefaultRoute, Route, Link, RouteHandler} from 'react-router';
 import BackboneMixin from 'backbone-react-component';
 import i18n from 'i18next-client';
 import Reflux from 'reflux';
+import _ from 'lodash';
 
 import MapMonitor from './components/MapMonitor';
 import Settings from './components/Settings';
@@ -46,12 +47,13 @@ const Mixin = {
 class Todo extends React.Component {
   constructor(props) {
     super(props);
-    this.props = {
-    };
-    this.state = {
+    this._mixedGetDefaultProps();
+    this._mixedGetInitialState();
+    this.props = this._mixedGetDefaultProps();
+    this.state = _.defaults({
       count: props.count,
       localCount: 1,
-    };
+    }, this._mixedGetInitialState());
   }
   componentWillMount() {
     console.log('Todo componentWillMount');
@@ -78,7 +80,7 @@ class Todo extends React.Component {
   }
   _countUp() {
     this.setState({
-      localCount: this.state.localCount + 1
+      localCount: this.state.localCount + 1,
     });
   }
   render() {
@@ -95,7 +97,33 @@ class Todo extends React.Component {
   }
 }
 
-reactMixin(Todo.prototype, Mixin);
+// Fix getDefaultProps/getInitialState probolem on react es6 class
+function fixedMixin(prototype, mixin) {
+  if (mixin.getDefaultProps) {
+    const orig = prototype._mixedGetDefaultProps;
+    prototype._mixedGetDefaultProps = function() {
+      const props = orig ? orig.bind(this)() : {};
+      // TODO: check dupulicated key
+      return _.defaults(props, mixin.getDefaultProps.bind(this)());
+    };
+  } else {
+    prototype._mixedGetDefaultProps = function() {};
+  }
+  if (mixin.getInitialState) {
+    const orig = prototype.getInitialState;
+    prototype._mixedGetInitialState = function() {
+      const state = orig ? orig.bind(this)() : {};
+      // TODO: check dupulicated key
+      return _.defaults(state, mixin.getInitialState.bind(this)());
+    };
+  } else {
+    prototype._mixedGetInitialState = function() {};
+  }
+  const fixedMix = _.omit(mixin, 'getDefaultProps', 'getInitialState');
+  reactMixin(prototype, fixedMix);
+}
+
+fixedMixin(Todo.prototype, Mixin);
 
 var TodoList = React.createClass({
   getDefaultProps() {
