@@ -16,6 +16,7 @@
     "lodash": "^3.10.0",
     "material-ui": "^0.10.1",
     "react": "^0.13.3",
+    "react-mixin": "^1.6.0",
     "react-router": "^0.13.3",
     "react-tap-event-plugin": "^0.1.7",
     "reflux": "^0.2.10",
@@ -38,10 +39,21 @@
     "test": "jest"
   },
   "jest": {
-    "testPathDirs": ["<rootDir>/web/static/js"],
+    "testPathDirs": [
+      "<rootDir>/web/static/js"
+    ],
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "testFileExtensions": ["es6", "js"],
-    "moduleFileExtensions": ["js", "json", "es6"],
-    "unmockedModulePathPatterns": ["react"]
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ],
+    "unmockedModulePathPatterns": [
+      "react"
+    ]
   }
 }
