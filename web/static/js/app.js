@@ -55,7 +55,6 @@ const Mixin2 = {
   },
 };
 
-
 class Todo extends React.Component {
   constructor(props) {
     super(props); // super may change this.props or this.state
@@ -120,7 +119,7 @@ function fixedMixin(cls, mixin) {
       _.extend(this.props, mixin.getDefaultProps.apply(this));
     };
   } else {
-    prototype._doMixedDefaultProps = function() {
+    prototype._doMixedDefaultProps = prototype._doMixedInitialState || function() {
       this.props = this.props || {};
     };
   }
@@ -134,7 +133,7 @@ function fixedMixin(cls, mixin) {
       _.extend(this.state, mixin.getInitialState.apply(this));
     };
   } else {
-    prototype._doMixedInitialState = function() {
+    prototype._doMixedInitialState = prototype._doMixedInitialState || function() {
       this.state = this.state || {};
     };
   }
