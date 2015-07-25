@@ -15,6 +15,12 @@ import BookCollection from './collections/BookCollection';
 import reactMixin from 'react-mixin';
 
 const Mixin = {
+  propTypes: {
+    requiredMixedProp: React.PropTypes.string.isRequired,
+    mixedTest() {
+      console.log('Mixin customProp');
+    },
+  },
   getDefaultProps() {
     console.log('Mixin getDefaultProps');
     return {
@@ -28,7 +34,6 @@ const Mixin = {
   },
   componentWillMount() {
     console.log('Mixin componentWillMount');
-    return true;
   },
   componentDidMount() {
     console.log('Mixin componentDidMount');
@@ -44,13 +49,20 @@ const Mixin = {
   },
 };
 
+const Mixin2 = {
+  propTypes: {
+    requiredMixedProp2: React.PropTypes.string.isRequired,
+  },
+};
+
+
 class Todo extends React.Component {
   constructor(props) {
     super(props); // super may change this.props or this.state
-    this._doMixedDefaultProps();
-    this._doMixedInitialState();
+    console.log(this.propTypes);
+    this._resolveMixin();
     _.extend(this.state, {
-      count: props.count,
+      count: this.props.count,
       localCount: 1,
     });
   }
@@ -96,8 +108,9 @@ class Todo extends React.Component {
   }
 }
 
-// Fix getDefaultProps/getInitialState probolem on react es6 class
-function fixedMixin(prototype, mixin) {
+// Fix getDefaultProps/getInitialState/propTypes probolem on react es6 class
+function fixedMixin(cls, mixin) {
+  const prototype = cls.prototype;
   if (mixin.getDefaultProps) {
     const orig = prototype._doMixedDefaultProps;
     prototype._doMixedDefaultProps = function() {
@@ -107,8 +120,11 @@ function fixedMixin(prototype, mixin) {
       _.extend(this.props, mixin.getDefaultProps.apply(this));
     };
   } else {
-    prototype._doMixedDefaultProps = function() {};
+    prototype._doMixedDefaultProps = function() {
+      this.props = this.props || {};
+    };
   }
+
   if (mixin.getInitialState) {
     const orig = prototype._doMixedInitialState;
     prototype._doMixedInitialState = function() {
@@ -118,13 +134,27 @@ function fixedMixin(prototype, mixin) {
       _.extend(this.state, mixin.getInitialState.apply(this));
     };
   } else {
-    prototype._doMixedInitialState = function() {};
+    prototype._doMixedInitialState = function() {
+      this.state = this.state || {};
+    };
   }
-  const fixedMix = _.omit(mixin, 'getDefaultProps', 'getInitialState');
+
+  if (mixin.propTypes) {
+    // TODO: check dupulicated key
+    cls.propTypes = cls.propTypes || {};
+    _.extend(cls.propTypes, mixin.propTypes);
+  }
+
+  prototype._resolveMixin = function() {
+    this._doMixedDefaultProps();
+    this._doMixedInitialState();
+  };
+  const fixedMix = _.omit(mixin, 'getDefaultProps', 'getInitialState', 'propTypes');
   reactMixin(prototype, fixedMix);
 }
 
-fixedMixin(Todo.prototype, Mixin);
+fixedMixin(Todo, Mixin);
+fixedMixin(Todo, Mixin2);
 
 var TodoList = React.createClass({
   getDefaultProps() {
