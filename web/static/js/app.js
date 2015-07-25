@@ -46,14 +46,13 @@ const Mixin = {
 
 class Todo extends React.Component {
   constructor(props) {
-    super(props);
-    this._mixedGetDefaultProps();
-    this._mixedGetInitialState();
-    this.props = this._mixedGetDefaultProps();
-    this.state = _.defaults({
+    super(props); // super may change this.props or this.state
+    this._doMixedDefaultProps();
+    this._doMixedInitialState();
+    _.extend(this.state, {
       count: props.count,
       localCount: 1,
-    }, this._mixedGetInitialState());
+    });
   }
   componentWillMount() {
     console.log('Todo componentWillMount');
@@ -100,24 +99,26 @@ class Todo extends React.Component {
 // Fix getDefaultProps/getInitialState probolem on react es6 class
 function fixedMixin(prototype, mixin) {
   if (mixin.getDefaultProps) {
-    const orig = prototype._mixedGetDefaultProps;
-    prototype._mixedGetDefaultProps = function() {
-      const props = orig ? orig.bind(this)() : {};
+    const orig = prototype._doMixedDefaultProps;
+    prototype._doMixedDefaultProps = function() {
       // TODO: check dupulicated key
-      return _.defaults(props, mixin.getDefaultProps.bind(this)());
+      this.props = this.props || {};
+      _.extend(this.props, orig ? orig.apply(this) : {});
+      _.extend(this.props, mixin.getDefaultProps.apply(this));
     };
   } else {
-    prototype._mixedGetDefaultProps = function() {};
+    prototype._doMixedDefaultProps = function() {};
   }
   if (mixin.getInitialState) {
-    const orig = prototype.getInitialState;
-    prototype._mixedGetInitialState = function() {
-      const state = orig ? orig.bind(this)() : {};
+    const orig = prototype._doMixedInitialState;
+    prototype._doMixedInitialState = function() {
       // TODO: check dupulicated key
-      return _.defaults(state, mixin.getInitialState.bind(this)());
+      this.state = this.state || {};
+      _.extend(this.state, orig ? orig.apply(this) : {});
+      _.extend(this.state, mixin.getInitialState.apply(this));
     };
   } else {
-    prototype._mixedGetInitialState = function() {};
+    prototype._doMixedInitialState = function() {};
   }
   const fixedMix = _.omit(mixin, 'getDefaultProps', 'getInitialState');
   reactMixin(prototype, fixedMix);
