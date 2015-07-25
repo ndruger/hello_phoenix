@@ -2,9 +2,10 @@ const gulp = require('gulp');
 const sass = require('gulp-ruby-sass');
 const babelify = require('babelify');
 const concat = require('gulp-concat');
-const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const eslint = require('gulp-eslint');
+const webpack = require('gulp-webpack');
+const webpackConfig = require('./webpack.config');
 
 gulp.task('watch', function() {
   gulp.watch('web/**/*.sass', ['css']);
@@ -17,15 +18,9 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-  return browserify({
-    entries: 'web/static/js/app.js',
-    debug: true
-  })
-    .transform(babelify)
-    .bundle()
-    .pipe(source('app.js'))
-    .pipe(gulp.dest('priv/static/js'))
-
+  return gulp.src('')
+    .pipe(webpack(webpackConfig))
+    .pipe(gulp.dest(webpackConfig.output.path));
 });
 
 gulp.task('lint', function () {
