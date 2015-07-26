@@ -10,6 +10,9 @@ module.exports = {
     path: __dirname + '/priv/static/js',
     filename: 'app.js',
   },
+  externals: {
+    jquery: 'jQuery',
+  },
   resolve: {
     root: __dirname + '/web/static/js',
   },
