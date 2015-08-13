@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const sass = require('gulp-ruby-sass');
 const babelify = require('babelify');
 const concat = require('gulp-concat');
 const source = require('vinyl-source-stream');
@@ -8,16 +7,12 @@ const webpack = require('gulp-webpack');
 const webpackConfig = require('./webpack.config');
 
 gulp.task('watch', function() {
-  gulp.watch('web/**/*.sass', ['css']);
-  gulp.watch('web/**/*.js', ['js']);
+  gulp.watch('web/**/*.scss', ['assets']);
+  gulp.watch('web/**/*.css', ['assets']);
+  gulp.watch('web/**/*.js', ['assets']);
 });
 
-gulp.task('css', function() {
-  return sass('web/static/css/app.scss')
-    .pipe(gulp.dest('priv/static/css'));
-});
-
-gulp.task('js', function() {
+gulp.task('assets', function() {
   return gulp.src('')
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest(webpackConfig.output.path));
@@ -30,5 +25,5 @@ gulp.task('lint', function () {
     .pipe(eslint.failOnError());
 });
 
-gulp.task('default', ['css', 'js']);
+gulp.task('default', ['assets']);
 

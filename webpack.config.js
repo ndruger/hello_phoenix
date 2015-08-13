@@ -7,8 +7,9 @@ module.exports = {
     './web/static/js/app.js',
   ],
   output: {
-    path: __dirname + '/priv/static/js',
+    path: __dirname + '/priv/static/assets',
     filename: 'app.js',
+    publicPath: '/assets/',
   },
   externals: {
     jquery: 'jQuery',
@@ -19,6 +20,10 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
+      { test: /\.scss$/, loader: 'style!css!sass' },
+      { test: /\.css$/, loader: 'style!css!sass' },
+      { test: /\.png$/, loader: "file-loader" },
+      { test: /\.jpg$/, loader: "file-loader" },
     ],
   },
 };

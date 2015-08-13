@@ -7,7 +7,7 @@ defmodule HelloPhoenix.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/", from: :hello_phoenix, gzip: false,
-    only: ~w(css images js favicon.ico robots.txt)
+    only: ~w(assets css images js favicon.ico robots.txt)
 
   plug Plug.Static,
     at: "/locales", from: "web/static/locales"
