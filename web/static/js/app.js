@@ -7,6 +7,7 @@ import Reflux from 'reflux';
 import MapMonitor from './components/MapMonitor';
 import Settings from './components/Settings';
 import Dashboard from './components/Dashboard';
+import MixinTest from './components/MixinTest';
 
 import TodoListStore from './stores/TodoListStore';
 import BookCollection from './collections/BookCollection';
@@ -22,6 +23,7 @@ const App = React.createClass({
             <li><Link to='app'>Dashboard</Link></li>
             <li><Link to='map'>MapMonitor</Link></li>
             <li><Link to='settings'>Settings</Link></li>
+            <li><Link to='mixintest'>MixinTest</Link></li>
           </ul>
         </header>
         <RouteHandler list={this.state.list} />
@@ -35,6 +37,7 @@ const routes = (
     <DefaultRoute handler={Dashboard}/>
     <Route name='map' handler={MapMonitor}/>
     <Route name='settings' handler={Settings}/>
+    <Route name='mixintest' handler={MixinTest}/>
   </Route>
 );
 
