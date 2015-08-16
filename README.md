@@ -24,7 +24,7 @@ Now you can visit `localhost:4000` from your browser.
 
 ### JS Side
 
-`npm test`
+`karma start`
 
 ## Test with Coverage
 

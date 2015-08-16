@@ -25,6 +25,16 @@ module.exports = {
       { test: /\.png$/, loader: "file-loader" },
       { test: /\.jpg$/, loader: "file-loader" },
     ],
+    postLoaders: (function() {
+      if (process.env.NODE_ENV !== 'test') {
+        return [];
+      }
+      return [{
+        test: /\.js$/,
+        exclude: /(node_modules\/|\.spec|\.webpack\.js)/,
+        loader: 'istanbul-instrumenter'
+      }];
+    })()
   },
 };
 

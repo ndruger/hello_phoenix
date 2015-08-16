@@ -8,7 +8,7 @@ class BookCollection extends Backbone.Collection {
   url() {
     return '/api/v1/books';
   }
-},
+}
 
 export default BookCollection;
 
