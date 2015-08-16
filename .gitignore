@@ -24,6 +24,7 @@ erl_crash.dump
 
 # Coverage
 /cover
+/browser_cover
 
 # Bower
 /bower_components
