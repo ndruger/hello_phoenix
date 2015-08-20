@@ -27,7 +27,7 @@ const SomeAwesomeComponent = React.createClass({
   },
 });
 
-const Dashboard = React.createClass({
+const BackboneTestComponent = React.createClass({
   // mixins: [backboneMixin, Router.State],
   mixins: [BackboneMixin],
 
@@ -54,4 +54,4 @@ const Dashboard = React.createClass({
   },
 });
 
-export default Dashboard;
+export default BackboneTestComponent;

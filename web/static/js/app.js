@@ -4,10 +4,9 @@ import BackboneMixin from 'backbone-react-component';
 import i18n from 'i18next-client';
 import Reflux from 'reflux';
 
-import MapMonitor from './components/MapMonitor';
 import Settings from './components/Settings';
-import Dashboard from './components/Dashboard';
-import MixinTest from './components/MixinTest';
+import BackboneTestPage from './components/BackboneTestPage';
+import MixinTestPage from './components/MixinTestPage';
 
 import TodoListStore from './stores/TodoListStore';
 import BookCollection from './collections/BookCollection';
@@ -20,10 +19,9 @@ const App = React.createClass({
       <div>
         <header>
           <ul>
-            <li><Link to='app'>Dashboard</Link></li>
-            <li><Link to='map'>MapMonitor</Link></li>
+            <li><Link to='app'>BackboneTestPage</Link></li>
             <li><Link to='settings'>Settings</Link></li>
-            <li><Link to='mixintest'>MixinTest</Link></li>
+            <li><Link to='mixintest'>MixinTestPage</Link></li>
           </ul>
         </header>
         <RouteHandler list={this.state.list} />
@@ -34,10 +32,9 @@ const App = React.createClass({
 
 const routes = (
   <Route name='app' path='/' handler={App}>
-    <DefaultRoute handler={Dashboard}/>
-    <Route name='map' handler={MapMonitor}/>
+    <DefaultRoute handler={BackboneTestPage}/>
     <Route name='settings' handler={Settings}/>
-    <Route name='mixintest' handler={MixinTest}/>
+    <Route name='mixintest' handler={MixinTestPage}/>
   </Route>
 );
 
