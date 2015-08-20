@@ -7,13 +7,9 @@ import Reflux from 'reflux';
 import Settings from './components/Settings';
 import BackboneTestPage from './components/BackboneTestPage';
 import MixinTestPage from './components/MixinTestPage';
-
-import TodoListStore from './stores/TodoListStore';
-import BookCollection from './collections/BookCollection';
+import BootstrapTestPage from './components/BootstrapTestPage';
 
 const App = React.createClass({
-  mixins: [BackboneMixin, Reflux.connect(TodoListStore, 'list')],
-
   render() {
     return (
       <div>
@@ -22,19 +18,21 @@ const App = React.createClass({
             <li><Link to='app'>BackboneTestPage</Link></li>
             <li><Link to='settings'>Settings</Link></li>
             <li><Link to='mixintest'>MixinTestPage</Link></li>
+            <li><Link to='bootstrap'>BootstrapTestPage</Link></li>
           </ul>
         </header>
-        <RouteHandler list={this.state.list} />
+        <RouteHandler/>
       </div>
     );
-  },
+  }
 });
 
 const routes = (
   <Route name='app' path='/' handler={App}>
-    <DefaultRoute handler={BackboneTestPage}/>
-    <Route name='settings' handler={Settings}/>
-    <Route name='mixintest' handler={MixinTestPage}/>
+    <Route name='settings' handler={Settings} />
+    <Route name='mixintest' handler={MixinTestPage} />
+    <Route name='bootstrap' handler={BootstrapTestPage} />
+    <DefaultRoute handler={BackboneTestPage} />
   </Route>
 );
 

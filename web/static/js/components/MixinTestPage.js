@@ -61,7 +61,6 @@ var Todo = React.createClass({
   },
 
   componentWillUnmount() {
-    debugger;
     console.log('Todo componentWillUnmount');
   },
 
