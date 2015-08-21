@@ -38,7 +38,7 @@ const Mixin = {
 const Todo = React.createClass({
   propTypes: {
     todo: React.PropTypes.object.isRequired,
-    count: React.PropTypes.integer.isRequired,
+    count: React.PropTypes.number.isRequired,
   },
 
   mixins: [

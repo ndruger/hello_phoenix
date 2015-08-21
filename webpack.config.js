@@ -3,9 +3,20 @@ const webpack = require('webpack');
 module.exports = {
   devtool: (process.env.NODE_ENV === undefined || process.env.NODE_ENV === 'development') ? 'eval-cheap-module-source-map' : undefined,
   debug: true,
-  entry: [
-    './web/static/js/app.js',
-  ],
+  entry: {
+    app: './web/static/js/app.js',
+    vendor: [
+      'react',
+      'react-router',
+      'reflux',
+      'i18next-client',
+      'react-bootstrap',
+      'backbone',
+      'chai',
+      'react/addons',
+      'material-ui',
+    ]
+  },
   output: {
     path: __dirname + '/priv/static/assets',
     filename: 'app.js',
@@ -36,5 +47,11 @@ module.exports = {
       }];
     })()
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin(
+      "vendor",
+      "vendor.js"
+    )
+  ],
 };
 
