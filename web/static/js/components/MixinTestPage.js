@@ -1,9 +1,4 @@
 import React from 'react';
-import Router, {DefaultRoute, Route, Link, RouteHandler} from 'react-router';
-import BackboneMixin from 'backbone-react-component';
-import i18n from 'i18next-client';
-import Reflux from 'reflux';
-import _ from 'lodash';
 
 const Mixin = {
   propTypes: {
@@ -40,7 +35,12 @@ const Mixin = {
   },
 };
 
-var Todo = React.createClass({
+const Todo = React.createClass({
+  propTypes: {
+    todo: React.PropTypes.object.isRequired,
+    count: React.PropTypes.integer.isRequired,
+  },
+
   mixins: [
     Mixin,
   ],
@@ -60,8 +60,8 @@ var Todo = React.createClass({
     console.log('Todo componentDidMount');
   },
 
-  componentWillUnmount() {
-    console.log('Todo componentWillUnmount');
+  componentWillReceiveProps(nextProps) {
+    console.log('Todo componentWillReceiveProps', arguments);
   },
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -77,14 +77,8 @@ var Todo = React.createClass({
     console.log('Todo componentDidUpdate');
   },
 
-  componentWillReceiveProps(nextProps) {
-    console.log('Todo componentWillReceiveProps', arguments);
-  },
-
-  _countUp() {
-    this.setState({
-      localCount: this.state.localCount + 1,
-    });
+  componentWillUnmount() {
+    console.log('Todo componentWillUnmount');
   },
 
   render() {
@@ -98,6 +92,12 @@ var Todo = React.createClass({
         <button onClick={this._countUp.bind(this)}>countUp</button>
       </div>
     );
+  },
+
+  _countUp() {
+    this.setState({
+      localCount: this.state.localCount + 1,
+    });
   },
 });
 
@@ -126,11 +126,14 @@ const TodoList = React.createClass({
   componentWillMount() {
     console.log('TodoList componentWillMount');
   },
+  componentWillUnmount() {
+    console.log('TodoList componentWillUnmount');
+  },
   componentDidMount() {
     console.log('TodoList componentDidMount');
   },
-  componentWillUnmount() {
-    console.log('TodoList componentWillUnmount');
+  componentWillReceiveProps(nextProps) {
+    console.log('TodoList componentWillReceiveProps', arguments);
   },
   shouldComponentUpdate(nextProps, nextState) {
     console.log('TodoList shouldComponentUpdate');
@@ -142,12 +145,9 @@ const TodoList = React.createClass({
   componentDidUpdate(prevProps, prevState) {
     console.log('TodoList componentDidUpdate');
   },
-  componentWillReceiveProps(nextProps) {
-    console.log('TodoList componentWillReceiveProps', arguments);
-  },
   render() {
     console.log('TodoList render', this.state);
-    var todos = this.state.todos.map((todo) => {
+    const todos = this.state.todos.map((todo) => {
       return (
         <li key={todo.id}>
           <Todo todo={todo} count={this.state.count}/>

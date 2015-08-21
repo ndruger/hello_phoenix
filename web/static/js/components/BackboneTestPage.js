@@ -1,5 +1,4 @@
 import React from 'react';
-import {Route, Link} from 'react-router';
 import mui from 'material-ui';
 
 import BookCollection from '../collections/BookCollection';
@@ -22,7 +21,7 @@ const SomeAwesomeComponent = React.createClass({
 
   render() {
     return (
-        <RaisedButton label='Default' />
+        <RaisedButton label="Default" />
     );
   },
 });
@@ -30,6 +29,11 @@ const SomeAwesomeComponent = React.createClass({
 const BackboneTestComponent = React.createClass({
   // mixins: [backboneMixin, Router.State],
   mixins: [BackboneMixin],
+
+  componentDidMount() {
+    this.getCollection().fetch();
+    // setState
+  },
 
   render() {
     return (
@@ -48,10 +52,6 @@ const BackboneTestComponent = React.createClass({
     return new BookCollection();
   },
 
-  componentDidMount() {
-    this.getCollection().fetch();
-    // setState
-  },
 });
 
 export default BackboneTestComponent;

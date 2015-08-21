@@ -10,10 +10,9 @@ describe('Settings', () => {
     const settings = TestUtils.renderIntoDocument(
       <Settings/>
     );
-    let content = TestUtils.findRenderedDOMComponentWithTag(
+    const content = TestUtils.findRenderedDOMComponentWithTag(
       settings, 'div'
     );
     expect(content.getDOMNode().textContent).to.equal('Settings');
-
   });
 });
