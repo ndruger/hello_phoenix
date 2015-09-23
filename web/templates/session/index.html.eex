@@ -1,0 +1,5 @@
+<%= form_for @conn, session_path(@conn, :create), [name: :login], fn form -> %>
+  <%= text_input form, :email %>
+  <%= password_input form, :password %>
+  <%= submit "Login" %>
+<% end %>

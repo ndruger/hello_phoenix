@@ -1,7 +1,6 @@
 defmodule HelloPhoenix.Router do
   use HelloPhoenix.Web, :router
 
-
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -10,15 +9,22 @@ defmodule HelloPhoenix.Router do
   end
 
   pipeline :api do
+    plug :fetch_session
+    plug HelloPhoenix.Plugs.LogUserId
     plug :accepts, ["json"]
   end
 
   scope "/", HelloPhoenix do
     pipe_through :browser
 
-    get "/",                 PageController,  :index
-    get "/hello",            HelloController, :index
-    get "/hello/:messenger", HelloController, :show
+    get    "/",                 PageController,    :index
+ 
+    get    "/hello",            HelloController,   :index
+    get    "/hello/:messenger", HelloController,   :show
+ 
+    get    "/login",            SessionController, :index
+    post   "/login",            SessionController, :create
+    delete "/login",            SessionController, :delete
 
   end
 

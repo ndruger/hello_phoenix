@@ -1,3 +1,3 @@
-defmodule HelloPhoenix.HelloView do
+defmodule HelloPhoenix.SessionView do
   use HelloPhoenix.Web, :view
 end
