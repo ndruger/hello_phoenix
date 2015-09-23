@@ -24,7 +24,9 @@ defmodule HelloPhoenix.Web do
 
   def controller do
     quote do
-      use Phoenix.Controller
+      use Phoenix.Controller, [
+        log: :info
+      ]
 
       # Import URL helpers from the router
       import HelloPhoenix.Router.Helpers
