@@ -2,15 +2,19 @@ defmodule HelloPhoenix.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :hello_phoenix,
-     version: "0.0.1",
-     elixir: "~> 1.0",
-     elixirc_paths: elixirc_paths(Mix.env),
-     compilers: [:phoenix] ++ Mix.compilers,
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     test_coverage: [tool: Coverex.Task],
-     deps: deps]
+    [
+       app: :hello_phoenix,
+       version: "0.0.1",
+       elixir: "~> 1.0",
+       elixirc_paths: elixirc_paths(Mix.env),
+       compilers: [:phoenix] ++ Mix.compilers,
+       build_embedded: Mix.env == :prod,
+       start_permanent: Mix.env == :prod,
+       test_coverage: [tool: Coverex.Task],
+       deps: deps,
+       # dialyzer: [flags: ["-Wunmatched_returns", "-Werror_handling", "-Wrace_conditions", "-Wunderspecs"],
+       dialyzer: [flags: ["-Wunmatched_returns", "-Werror_handling", "-Wrace_conditions", "-Wunderspecs", "-Wno_behaviours"]]
+    ]
   end
 
   # Configuration for the OTP application
@@ -29,12 +33,14 @@ defmodule HelloPhoenix.Mixfile do
   #
   # Type `mix help deps` for examples and options
   defp deps do
-    [{:phoenix, "~> 0.14"},
-     {:phoenix_html, "~> 1.1"},
-     {:phoenix_live_reload, "~> 0.4", only: :dev},
-     {:cowboy, "~> 1.0"},
-     {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
-     {:coverex, "~> 1.4.1" },
-     {:httpotion, "~> 2.1.0"}]
+    [
+      {:phoenix, "~> 0.14"},
+      {:phoenix_html, "~> 1.1"},
+      {:phoenix_live_reload, "~> 0.4", only: :dev},
+      {:cowboy, "~> 1.0"},
+      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
+      {:coverex, "~> 1.4.1" },
+      {:httpotion, "~> 2.1.0"}
+    ]
   end
 end
