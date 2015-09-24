@@ -31,3 +31,6 @@ erl_crash.dump
 # Bower
 /bower_components
 
+# plt
+/.local.plt
+

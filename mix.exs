@@ -13,6 +13,7 @@ defmodule HelloPhoenix.Mixfile do
        test_coverage: [tool: Coverex.Task],
        deps: deps,
        dialyzer: [
+          plt_file: ".local.plt",
           plt_add_apps: [
             "_build/dev/lib/phoenix/ebin",
             "_build/dev/lib/phoenix_html/ebin",
