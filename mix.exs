@@ -12,8 +12,19 @@ defmodule HelloPhoenix.Mixfile do
        start_permanent: Mix.env == :prod,
        test_coverage: [tool: Coverex.Task],
        deps: deps,
-       # dialyzer: [flags: ["-Wunmatched_returns", "-Werror_handling", "-Wrace_conditions", "-Wunderspecs"],
-       dialyzer: [flags: ["-Wunmatched_returns", "-Werror_handling", "-Wrace_conditions", "-Wunderspecs", "-Wno_behaviours"]]
+       dialyzer: [
+          plt_add_apps: [
+            "_build/dev/lib/phoenix/ebin",
+            "_build/dev/lib/phoenix_html/ebin",
+            "_build/dev/lib/phoenix_live_reload/ebin",
+            "_build/dev/lib/cowboy/ebin",
+            "_build/dev/lib/ibrowse/ebin",
+            "_build/dev/lib/httpotion/ebin",
+            "_build/dev/lib/plug/ebin",
+          ]
+       ],
+        # dialyzer: [flags: ["-Wunmatched_returns", "-Werror_handling", "-Wrace_conditions", "-Wunderspecs"],
+#       dialyzer: [flags: ["-Wunmatched_returns", "-Werror_handling", "-Wrace_conditions", "-Wunderspecs", "-Wno_behaviours"]]
     ]
   end
 
@@ -39,7 +50,7 @@ defmodule HelloPhoenix.Mixfile do
       {:phoenix_live_reload, "~> 0.4", only: :dev},
       {:cowboy, "~> 1.0"},
       {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
-      {:coverex, "~> 1.4.1" },
+      {:coverex, "~> 1.4.1", only: :dev},
       {:httpotion, "~> 2.1.0"}
     ]
   end
