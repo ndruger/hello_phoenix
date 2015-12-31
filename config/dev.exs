@@ -12,19 +12,19 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
     debug_errors: true,
     code_reloader: true,
     cache_static_lookup: false,
-    watchers: [node: ["node_modules/webpack/bin/webpack.js", "--watch"]]
+    watchers: [node: ["node_modules/webpack/bin/webpack.js", "--watch"]],
   ]
 #  watchers: [node: ["node_modules/brunch/bin/brunch", "watch"]]
 
 config :hello_phoenix, HelloPhoenix.Backend,
   [
-    neko2: "test"
+    neko2: "test",
   ]
 
 config :backend,
   [
     host: "http://localhost",
-    key: System.get_env("MAILGUN_API_KEY")
+    key: System.get_env("MAILGUN_API_KEY"),
   ]
 
 # Watch static and templates for browser reloading.
@@ -33,7 +33,7 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif)$},
       ~r{web/views/.*(ex)$},
-      ~r{web/templates/.*(eex)$}
+      ~r{web/templates/.*(eex)$},
     ]
   ]
 

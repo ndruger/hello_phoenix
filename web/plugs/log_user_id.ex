@@ -1,4 +1,4 @@
-defmodule HelloPhoenix.Plugs.LogUserId do
+defmodule HelloPhoenix.Plug.LogUserId do
   import Plug.Conn
   require Logger
 

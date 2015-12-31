@@ -10,7 +10,7 @@ defmodule HelloPhoenix.Router do
 
   pipeline :api do
     plug :fetch_session
-    plug HelloPhoenix.Plugs.LogUserId
+    plug HelloPhoenix.Plug.LogUserId
     plug :accepts, ["json"]
   end
 
