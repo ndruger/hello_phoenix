@@ -14,12 +14,6 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
     cache_static_lookup: false,
     watchers: [node: ["node_modules/webpack/bin/webpack.js", "--watch"]],
   ]
-#  watchers: [node: ["node_modules/brunch/bin/brunch", "watch"]]
-
-config :hello_phoenix, HelloPhoenix.Backend,
-  [
-    neko2: "test",
-  ]
 
 config :backend,
   [
