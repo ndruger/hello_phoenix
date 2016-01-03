@@ -24,7 +24,7 @@ config :logger, :truncate, 1024 * 10
 config :logger, :console,
   format: "$date $time $metadata[$level] $message\n",
   metadata: [:request_id, :user_id]
-
+  
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
