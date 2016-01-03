@@ -44,6 +44,7 @@ defmodule HelloPhoenix.Mixfile do
         :exrm,
         :logger_file_backend,
         :folsom,
+        :recon,
       ]
     ]
   end
@@ -67,6 +68,7 @@ defmodule HelloPhoenix.Mixfile do
       {:exrm, "~> 0.19.9"},
       {:logger_file_backend , "~> 0.0.5"},
       {:folsom, "~> 0.8.3"},
+      {:recon, "~> 2.2.1 "}
     ]
   end
 end
