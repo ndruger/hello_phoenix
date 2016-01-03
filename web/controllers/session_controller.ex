@@ -9,11 +9,9 @@ defmodule HelloPhoenix.SessionController do
   def create(conn, %{"login" => %{"email" => email, "password" => _}}) do
     # dummy login
     user_id = email
-
-    Logger.info("login: user_id=" <> user_id)
     
     conn
-    |> put_session(:user_id, user_id)
+    |> HelloPhoenix.Plugug.UserLogger.put_session(user_id)
     |> redirect(to: "/")
   end
 end

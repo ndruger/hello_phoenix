@@ -19,6 +19,7 @@ defmodule HelloPhoenix.Endpoint do
     plug Phoenix.CodeReloader
   end
 
+  plug :clear_metadata
   plug Plug.RequestId
   plug HelloPhoenix.Plug.Logger
 
@@ -35,5 +36,12 @@ defmodule HelloPhoenix.Endpoint do
     key: "_hello_phoenix_key",
     signing_salt: "o3cvE4zQ"
 
+  plug HelloPhoenix.Plug.UserLogger
+
   plug HelloPhoenix.Router
+
+  defp clear_metadata(conn, _params) do
+    HelloPhoenix.Plug.UserLogger.clear_metadata
+    conn
+  end
 end

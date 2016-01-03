@@ -33,8 +33,20 @@ defmodule HelloPhoenix.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [mod: {HelloPhoenix, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :httpotion]]
+    [
+      mod: {HelloPhoenix, []},
+      applications: [
+        :logger,
+        :phoenix,
+        :phoenix_html,
+        :cowboy,
+        :httpotion,
+        :exrm,
+        :logger_file_backend,
+        :folsom,
+        :recon,
+      ]
+    ]
   end
 
   # Specifies which paths to compile per environment
@@ -52,7 +64,11 @@ defmodule HelloPhoenix.Mixfile do
       {:cowboy, "~> 1.0"},
       {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
       {:coverex, "~> 1.4.1", only: :dev},
-      {:httpotion, "~> 2.1.0"}
+      {:httpotion, "~> 2.1.0"},
+      {:exrm, "~> 0.19.9"},
+      {:logger_file_backend , "~> 0.0.5"},
+      {:folsom, "~> 0.8.3"},
+      {:recon, "~> 2.2.1 "}
     ]
   end
 end

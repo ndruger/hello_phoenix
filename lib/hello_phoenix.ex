@@ -11,6 +11,11 @@ defmodule HelloPhoenix do
       supervisor(HelloPhoenix.Endpoint, []),
       # Here you could define other workers and supervisors as children
       # worker(HelloPhoenix.Worker, [arg1, arg2, arg3]),
+      # supervisor(HelloPhoenix.Worker.ResouceMonitorSupervisor, [max_process: 500]),
+      worker(HelloPhoenix.Worker.ResouceMonitor, [[
+        max_processes: 1000,
+        interval:      1000 * 60,
+      ]]),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

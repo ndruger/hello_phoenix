@@ -5,6 +5,9 @@
 # is restricted to this project.
 use Mix.Config
 
+config :phoenix, :filter_parameters,
+  ["password"]
+
 # Configures the endpoint
 config :hello_phoenix, HelloPhoenix.Endpoint,
   url: [host: "localhost"],
@@ -15,10 +18,13 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
-config :logger, :console,
-  format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id, :user_id]
+config :logger, :utc_log, true
+config :logger, :truncate, 1024 * 10
 
+config :logger, :console,
+  format: "$date $time $metadata[$level] $message\n",
+  metadata: [:request_id, :user_id]
+  
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
