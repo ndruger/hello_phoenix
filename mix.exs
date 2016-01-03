@@ -43,6 +43,7 @@ defmodule HelloPhoenix.Mixfile do
         :httpotion,
         :exrm,
         :logger_file_backend,
+        :folsom,
       ]
     ]
   end
@@ -65,6 +66,7 @@ defmodule HelloPhoenix.Mixfile do
       {:httpotion, "~> 2.1.0"},
       {:exrm, "~> 0.19.9"},
       {:logger_file_backend , "~> 0.0.5"},
+      {:folsom, "~> 0.8.3"},
     ]
   end
 end
