@@ -5,6 +5,9 @@
 # is restricted to this project.
 use Mix.Config
 
+config :phoenix, :filter_parameters,
+  ["password"]
+
 # Configures the endpoint
 config :hello_phoenix, HelloPhoenix.Endpoint,
   url: [host: "localhost"],
