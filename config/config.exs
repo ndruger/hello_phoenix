@@ -19,6 +19,8 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
 
 # Configures Elixir's Logger
 config :logger, :utc_log, true
+config :logger, :truncate, 1024 * 10
+
 config :logger, :console,
   format: "$date $time $metadata[$level] $message\n",
   metadata: [:request_id, :user_id]
