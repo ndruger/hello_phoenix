@@ -58,17 +58,21 @@ defmodule HelloPhoenix.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [
-      {:phoenix, "~> 1.1.1"},
-      {:phoenix_html, "~> 2.3.0"},
-      {:phoenix_live_reload, "~> 1.0.1", only: :dev},
+      {:phoenix, "~> 1.1.4"},
+      {:phoenix_html, "~> 2.5.0"},
+      {:poison, "~> 2.0"},
+      {:httpoison, "~> 0.8.0"},
+      {:hackney, "~> 1.4.4"},
+      {:phoenix_live_reload, "~> 1.0.3", only: :dev},
       {:cowboy, "~> 1.0"},
       {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
-      {:coverex, "~> 1.4.1", only: :dev},
-      {:httpotion, "~> 2.1.0"},
+      # {:coverex, "~> 1.4.8", only: :dev},
+      # {:httpotion, "~> 2.2.2"},
       {:exrm, "~> 0.19.9"},
       {:logger_file_backend , "~> 0.0.5"},
       {:folsom, "~> 0.8.3"},
-      {:recon, "~> 2.2.1 "}
+      {:recon, "~> 2.2.1 "},
+      {:credo, "~> 0.3", only: [:dev, :test]},
     ]
   end
 end

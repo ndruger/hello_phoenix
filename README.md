@@ -32,6 +32,12 @@ Now you can visit `localhost:4000` from your browser.
 
 ## Lint
 
+### Server Side
+
+`mix credo`
+
+### JS Side
+
 `gulp lint`
 
 ## Dializer
