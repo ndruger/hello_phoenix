@@ -6,4 +6,4 @@ otp_release:
 sudo: false
 before_script:  
     - npm install
-script: mix test
+script: MIX_ENV=test mix test
