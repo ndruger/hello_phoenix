@@ -1,0 +1,9 @@
+language: elixir
+elixir:
+    - 1.2.3
+otp_release:
+    - 18.0
+sudo: false
+before_script:  
+    - npm install
+script: mix test
