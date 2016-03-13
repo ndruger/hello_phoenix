@@ -4,6 +4,8 @@ elixir:
 otp_release:
     - 18.0
 sudo: false
+before_install:
+    - export MIX_ENV=test
 before_script:  
     - npm install
 script: MIX_ENV=test mix test
