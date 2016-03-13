@@ -64,15 +64,16 @@ defmodule HelloPhoenix.Mixfile do
       {:httpoison, "~> 0.8.0"},
       {:hackney, "~> 1.4.4"},
       {:phoenix_live_reload, "~> 1.0.3", only: :dev},
-      {:cowboy, "~> 1.0"},
-      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
+      {:cowboy, "~> 1.0.4"},
+      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.2.2", override: true},
       # {:coverex, "~> 1.4.8", only: :dev},
-      # {:httpotion, "~> 2.2.2"},
+      {:httpotion, "~> 2.2.2"},
       {:exrm, "~> 0.19.9"},
       {:logger_file_backend , "~> 0.0.5"},
       {:folsom, "~> 0.8.3"},
       {:recon, "~> 2.2.1 "},
-      {:credo, "~> 0.3", only: [:dev, :test]},
+      {:credo, "0.3.5", only: [:dev, :test]},
+      {:plug, "~> 1.1.2"},
     ]
   end
 end
