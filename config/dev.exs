@@ -15,12 +15,6 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
     watchers: [node: ["node_modules/webpack/bin/webpack.js", "--watch"]],
   ]
 
-config :backend,
-  [
-    host: "http://localhost",
-    key: System.get_env("MAILGUN_API_KEY"),
-  ]
-
 # Watch static and templates for browser reloading.
 config :hello_phoenix, HelloPhoenix.Endpoint,
   live_reload: [

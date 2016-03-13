@@ -17,10 +17,10 @@ defmodule HelloPhoenix.BooksController do
 
   defp log_message_after_action(conn, msg) do
     conn
-    |> register_before_send fn (conn) ->
+    |> register_before_send(fn (conn) ->
       conn
       |> log_message(msg)
-    end
+    end)
   end
 
 end
