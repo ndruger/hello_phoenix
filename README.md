@@ -55,3 +55,7 @@ this_repo$ mix dialyzer.plt
 this_repo$ mix compile
 this_repo$ mix dialyzer
 </pre>
+
+## WebPack
+
+`node ./node_modules/webpack/bin/webpack.js --progress --colors`
