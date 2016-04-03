@@ -21,7 +21,7 @@ defmodule HelloPhoenix.Plug.Logger do
         ""
       end
 
-      diff = :timer.now_diff(:os.timestamp(), before_time) |> div(1000) # to ms
+      diff = :os.timestamp() |> :timer.now_diff(before_time) |> div(1000) # to ms
       Logger.info(inspect([
           "HelloPhoenix.Plug.Logger:response",
           conn.method,
