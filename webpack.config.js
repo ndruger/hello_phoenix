@@ -30,7 +30,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
+      // { test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
+      {test: /\.js$/, loader: "babel", query: {presets: ["react", "es2015", "stage-0"]}},
       { test: /\.scss$/, loader: 'style!css!sass' },
       { test: /\.css$/, loader: 'style!css!sass' },
       { test: /\.png$/, loader: "file-loader" },
