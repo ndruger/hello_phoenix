@@ -1,5 +1,5 @@
 import i18n from 'i18next-client';
-import { createStore } from 'redux';
+import {createStore} from 'redux';
 
 function counter(state = 0, action) {
   switch (action.type) {
