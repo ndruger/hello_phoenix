@@ -12,7 +12,7 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
     debug_errors: true,
     code_reloader: true,
     cache_static_lookup: false,
-    watchers: [node: ["node_modules/webpack/bin/webpack.js", "--watch"]],
+    watchers: [npm: ["run", "watch"]],
   ]
 
 # Watch static and templates for browser reloading.
