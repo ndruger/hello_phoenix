@@ -17,7 +17,7 @@
 
 `mix phoenix.server`
 
-Now you can visit `localhost:4000` from your browser.
+Now you can visit `localhost:3000` from your browser.
 
 ## Test
 
@@ -41,7 +41,14 @@ Now you can visit `localhost:4000` from your browser.
 
 ### JS Side
 
-`gulp lint`
+`npm run lint`
+
+## How to add npm modules
+
+```bash
+npm insatall [module] --save
+npm shrinkwrap --dev
+```
 
 ## Dializer
 

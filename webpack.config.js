@@ -31,7 +31,7 @@ module.exports = {
   module: {
     loaders: [
       // { test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
-      {test: /\.js$/, loader: 'babel'},
+      {test: /\.js$/, loader: 'babel', exclude: /node_modules/},
       {test: /\.scss$/, loader: 'style!css!sass'},
       {test: /\.css$/, loader: 'style!css!sass'},
       {test: /\.png$/, loader: 'file-loader'},
@@ -55,9 +55,9 @@ module.exports = {
       'vendor',
       'vendor.js'
     ));
-    if (process.env.NODE_ENV !== undefined || process.env.NODE_ENV !== 'development') {
-      plugins.push(new webpack.optimize.UglifyJsPlugin());
-    }
+    // if (process.env.NODE_ENV !== undefined || process.env.NODE_ENV !== 'development') {
+    //   plugins.push(new webpack.optimize.UglifyJsPlugin());
+    // }
     return plugins;
   })(),
 };
