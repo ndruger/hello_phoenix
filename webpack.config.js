@@ -6,15 +6,15 @@ module.exports = {
   entry: {
     app: './web/static/js/app.js',
     vendor: [
-      'react',
-      'react-router',
-      'reflux',
-      'i18next-client',
-      'react-bootstrap',
       'backbone',
-      'chai',
+      'i18next-client',
+      'lodash',
+      'react',
+      'react-redux',
+      'react-router',
+      'react-bootstrap',
       'react/addons',
-      'material-ui',
+      'redux',
     ],
   },
   output: {
@@ -30,7 +30,6 @@ module.exports = {
   },
   module: {
     loaders: [
-      // { test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
       {test: /\.js$/, loader: 'babel', exclude: /node_modules/},
       {test: /\.scss$/, loader: 'style!css!sass'},
       {test: /\.css$/, loader: 'style!css!sass'},
@@ -55,9 +54,9 @@ module.exports = {
       'vendor',
       'vendor.js'
     ));
-    // if (process.env.NODE_ENV !== undefined || process.env.NODE_ENV !== 'development') {
-    //   plugins.push(new webpack.optimize.UglifyJsPlugin());
-    // }
+    if (process.env.NODE_ENV === 'production') {
+      plugins.push(new webpack.optimize.UglifyJsPlugin());
+    }
     return plugins;
   })(),
 };

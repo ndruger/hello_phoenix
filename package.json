@@ -37,14 +37,19 @@
     "object-assign": "^4.0.1",
     "redux-devtools": "^3.2.0",
     "requirejs": "^2.1.20",
+    "sass-lint": "^1.7.0",
     "vinyl-source-stream": "^1.1.0",
     "webpack": "^1.12.1",
-    "webpack-dev-server": "^1.11.0"
+    "webpack-dev-server": "^1.11.0",
+    "webpack-validator": "^1.4.0"
   },
   "scripts": {
-    "test": "jest",
-    "build": "webpack --progress --colors",
-    "lint": "gulp lint"
+    "test": "npm run lint && npm run lint_css && npm run lint_webpack",
+    "build": "node ./node_modules/webpack/bin/webpack.js --progress --colors --watch",
+    "lint": "node ./node_modules/gulp/bin/gulp.js lint",
+    "lint_css": "node ./node_modules/sass-lint/bin/sass-lint.js -c .scss-lint.yml 'web/static/css/**/*.scss' -v",
+    "lint_webpack": "node ./node_modules/webpack-validator/dist/bin/webpack-validator.js webpack.config.js",
+    "watch": "node ./node_modules/webpack/bin/webpack.js --progress --colors --watch"
   },
   "jest": {
     "testPathDirs": [

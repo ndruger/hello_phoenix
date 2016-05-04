@@ -48,6 +48,7 @@ Now you can visit `localhost:3000` from your browser.
 ```bash
 npm insatall [module] --save
 npm shrinkwrap --dev
+vi webpack.config.js # add vendor
 ```
 
 ## Dializer
