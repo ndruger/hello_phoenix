@@ -7,5 +7,5 @@ sudo: false
 before_install:
     - export MIX_ENV=test
 before_script:  
-    - npm install
+    - npm install -g npm@~2.15.1
 script: MIX_ENV=test mix test
