@@ -1,10 +1,14 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: (process.env.NODE_ENV === undefined || process.env.NODE_ENV === 'development') ? 'eval-cheap-module-source-map' : undefined,
   debug: true,
   entry: {
-    app: './web/static/js/app.js',
+    app: [
+      './web/static/js/app.js',
+      './web/static/css/app.scss',
+    ],
     vendor: [
       'backbone',
       'i18next-client',
@@ -31,8 +35,8 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.js$/, loader: 'babel', exclude: /node_modules/},
-      {test: /\.scss$/, loader: 'style!css!sass'},
-      {test: /\.css$/, loader: 'style!css!sass'},
+      {test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass')},
+      {test: /\.css$/, loader: ExtractTextPlugin.extract('css!sass')},
       {test: /\.png$/, loader: 'file-loader'},
       {test: /\.jpg$/, loader: 'file-loader'},
     ],
@@ -54,6 +58,7 @@ module.exports = {
       'vendor',
       'vendor.js'
     ));
+    plugins.push(new ExtractTextPlugin('app.css'));
     if (process.env.NODE_ENV === 'production') {
       plugins.push(new webpack.optimize.UglifyJsPlugin());
     }
