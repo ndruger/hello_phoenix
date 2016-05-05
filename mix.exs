@@ -35,18 +35,20 @@ defmodule HelloPhoenix.Mixfile do
   def application do
     [
       mod: {HelloPhoenix, []},
-      applications: [
-        :logger,
-        :phoenix,
-        :phoenix_html,
-        :cowboy,
-        :httpotion,
-        :exrm,
-        :logger_file_backend,
-        :folsom,
-        :recon,
-      ]
+      applications: get_apps_from_deps ++ [:logger],
     ]
+  end
+
+  defp get_apps_from_deps do
+    Enum.filter(deps, fn
+      {_, _}       -> true
+      {_, _, opts} ->
+        case opts[:only] do
+          nil -> true
+          env -> env |> List.wrap |> Enum.member?(:prod)
+        end
+    end)
+    |> Enum.map(&(elem(&1, 0)))
   end
 
   # Specifies which paths to compile per environment
@@ -69,7 +71,7 @@ defmodule HelloPhoenix.Mixfile do
       # {:coverex, "~> 1.4.8", only: :dev},
       {:httpotion, "~> 2.2.2"},
       {:exrm, "~> 0.19.9"},
-      {:logger_file_backend , "~> 0.0.5"},
+      {:logger_file_backend , "~> 0.0.7"},
       {:folsom, "~> 0.8.3"},
       {:recon, "~> 2.2.1 "},
       {:credo, "0.3.5", only: [:dev, :test]},

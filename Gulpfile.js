@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
-const webpack = require('gulp-webpack');
+const webpack = require('webpack-stream');
 const webpackConfig = require('./webpack.config');
 
 gulp.task('assets', function() {
