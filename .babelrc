@@ -4,6 +4,13 @@
   ],
   "plugins": [
     "transform-runtime",
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
+    [
+      "typecheck", {
+        "disable": {
+          "production": true
+        }
+      }
+    ]
    ]
 }

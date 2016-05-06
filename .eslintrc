@@ -1,5 +1,6 @@
 {
   "extends": "airbnb",
+  "parser": "babel-eslint",
   "env": {
     "jquery": true,
     "mocha": true,
@@ -7,10 +8,12 @@
     "jest": true
   },
   "rules": {
+    "indent": ["error", 2],
     "no-console": 0,
     "no-debugger": 0,
     "func-names": 0,
     "no-unused-vars": [2, {"vars": "all", "args": "none"}],
+    "object-curly-spacing": ["error", "never"],
     "react/no-multi-comp": 0,
     "react/sort-comp": [2, {
       "order": [
