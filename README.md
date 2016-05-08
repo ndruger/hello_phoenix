@@ -5,7 +5,7 @@
 
 - node
 - phoenix
-- elixir
+- elixir(version is [.exenv-version](.exenv-version))
 - bowser(`npm install -g bower`)
 
 # Install/Update Packages
