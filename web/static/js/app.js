@@ -1,7 +1,7 @@
 import i18n from 'i18next-client';
 import {createStore} from 'redux';
 
-function counter(state = 0, action) {
+function counter(state = 0 : number, action) : number {
   switch (action.type) {
   case 'INCREMENT':
     return state + 1;
