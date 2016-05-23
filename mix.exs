@@ -35,11 +35,11 @@ defmodule HelloPhoenix.Mixfile do
   def application do
     [
       mod: {HelloPhoenix, []},
-      applications: get_apps_from_deps ++ [:logger],
+      applications: apps_from_deps ++ [:logger],
     ]
   end
 
-  defp get_apps_from_deps do
+  defp apps_from_deps do
     Enum.filter(deps, fn
       {_, _}       -> true
       {_, _, opts} ->
