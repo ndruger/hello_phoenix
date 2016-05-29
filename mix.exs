@@ -12,20 +12,6 @@ defmodule HelloPhoenix.Mixfile do
        start_permanent: Mix.env == :prod,
        test_coverage: [tool: Coverex.Task],
        deps: deps,
-       dialyzer: [
-          plt_file: ".local.plt",
-          plt_add_apps: [
-            "_build/dev/lib/phoenix/ebin",
-            "_build/dev/lib/phoenix_html/ebin",
-            "_build/dev/lib/phoenix_live_reload/ebin",
-            "_build/dev/lib/cowboy/ebin",
-            "_build/dev/lib/ibrowse/ebin",
-            "_build/dev/lib/httpotion/ebin",
-            "_build/dev/lib/plug/ebin",
-          ]
-       ],
-        # dialyzer: [flags: ["-Wunmatched_returns", "-Werror_handling", "-Wrace_conditions", "-Wunderspecs"],
-#       dialyzer: [flags: ["-Wunmatched_returns", "-Werror_handling", "-Wrace_conditions", "-Wunderspecs", "-Wno_behaviours"]]
     ]
   end
 
@@ -76,6 +62,7 @@ defmodule HelloPhoenix.Mixfile do
       {:recon, "~> 2.2.1 "},
       {:credo, "0.3.5", only: [:dev, :test]},
       {:plug, "~> 1.1.2"},
+      {:dialyze, "~> 0.2.1", only: :dev},
     ]
   end
 end
