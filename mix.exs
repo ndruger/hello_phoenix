@@ -57,6 +57,7 @@ defmodule HelloPhoenix.Mixfile do
       # {:coverex, "~> 1.4.8", only: :dev},
       {:httpotion, "~> 2.2.2"},
       {:exrm, "~> 0.19.9"},
+      {:ex_unit_notifier, "~> 0.1", only: :test},
       {:logger_file_backend , "~> 0.0.7"},
       {:folsom, "~> 0.8.3"},
       {:recon, "~> 2.2.1 "},
