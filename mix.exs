@@ -62,7 +62,7 @@ defmodule HelloPhoenix.Mixfile do
       {:folsom, "~> 0.8.3"},
       {:recon, "~> 2.2.1 "},
       {:credo, "0.3.5", only: [:dev, :test]},
-      {:plug, "~> 1.1.2"},
+      {:plug, "~> 1.7.1"},
       {:dialyze, "~> 0.2.1", only: :dev},
     ]
   end
