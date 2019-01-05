@@ -46,7 +46,7 @@ defmodule HelloPhoenix.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [
-      {:phoenix, "~> 1.1.4"},
+      {:phoenix, "~> 1.2.5"},
       {:phoenix_html, "~> 2.5.0"},
       {:poison, "~> 2.0"},
       {:httpoison, "~> 0.8.0"},
